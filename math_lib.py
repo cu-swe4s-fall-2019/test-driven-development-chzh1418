@@ -20,19 +20,17 @@ def list_mean(L):
 
     """
     # Check if input is a non-empty list
-    if len(L) == 0:
-        print('Empty input')
+    if L is None:
         return None
 
-    if L is None:
+    if len(L) == 0:
         return None
 
     # Check if the list contains only numbers
     if (isinstance(L, list)):
         for i in L:
             if not (isinstance(i, int) or isinstance(i, float)):
-                print('Input should be list of integers or floats')
-                return None
+                raise ValueError('Unsupported value in list.')
 
     m = float(sum(L)) / float(len(L))
     return m
@@ -53,19 +51,18 @@ def list_stdev(L):
         Arithmetic standard deviation of the values in L
     """
     # Check if input is a non-empty list
-    if len(L) < 2:
-        print('List is too short')
+    if L is None:
         return None
 
-    if L is None:
+    if len(L) < 2:
         return None
 
     # Check if the list contains only numbers
     if (isinstance(L, list)):
         for i in L:
             if not (isinstance(i, int) or isinstance(i, float)):
-                print('Input should be a list of integers or floats')
-                return None
+                raise ValueError('Unsupported value in list.')
+
     mean = list_mean(L)
     stdev = math.sqrt(float(sum([(float(x) - mean)**2 for x in L])) /
                       (len(L) - 1))
