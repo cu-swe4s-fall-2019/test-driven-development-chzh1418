@@ -1,6 +1,53 @@
+import sys
+import os
+import argparse
+import data_viz
+import get_data
+
+# Parsing arguments using argparse
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+            description='Pass Parameters')
+    # Add output file_name
+    parser.add_argument('--outfile_name',
+                        type=str,
+                        help='Name of the file',
+                        required=True)
+    # Add plot type
+    parser.add_argument('--plot_type',
+                        type=int,
+                        help='Number of column',
+                        required=True)
+    # Add column number
+    parser.add_argument('--col_num',
+                        type=int,
+                        help='Column number'
+                        required=True)
+
+    return parser.parse_args()
+
 
 def main():
-    pass
+    # Get the arquments
+    args = parse_args()
+    # Get the data from stdin
+    A = get_data.read_stdin_col(args.col_num)
+    if len(L) == 0:
+        print('Empty list')
+        sys.exit(1)
+    if args.plot_type == 'boxplot':
+        data_viz.boxplot(A, args.outfile_name)
+    if args.plot_type == 'histogram':
+        data_viz.histogram(A, args.outfile_name)
+    if args.plot_type == 'combo':
+        data_viz.combo(A, args.outfile_name)
+    else:
+        print('Check plot type')
+        sys.exit(1)
+    sys.exit(0)
+
 
 if __name__ == '__main__':
     main()
