@@ -3,6 +3,8 @@ import argparse
 import sys
 
 # Define function to calculate the mean value of a list.
+
+
 def list_mean(L):
     """Compute the mean of a non-empty array.
 
@@ -24,23 +26,25 @@ def list_mean(L):
 
     if L is None:
         return None
-    
+
     # Check if the list contains only numbers
     if (isinstance(L, list)):
         for i in L:
             if not (isinstance(i, int) or isinstance(i, float)):
                 print('Input should be list of integers or floats')
                 return None
-    
+
     m = float(sum(L)) / float(len(L))
     return m
 # Define function to calculate the standard deviation of a list of numbers.
+
+
 def list_stdev(L):
     """Calculate the standard deviation of a non-empty array.
 
     Parameters
     --------
-    L : List of numebrs 
+    L : List of numebrs
         could be integer, float or both.
 
     Returns
@@ -52,7 +56,7 @@ def list_stdev(L):
     if len(L) < 2:
         print('List is too short')
         return None
-    
+
     if L is None:
         return None
 
@@ -63,5 +67,6 @@ def list_stdev(L):
                 print('Input should be a list of integers or floats')
                 return None
     mean = list_mean(L)
-    stdev = math.sqrt(float(sum([(float(x)- mean)**2 for x in L]))/(len(L) - 1))
+    stdev = math.sqrt(float(sum([(float(x) - mean)**2 for x in L])) /
+                      (len(L) - 1))
     return stdev
