@@ -15,7 +15,7 @@ def read_stdin_col(col_num):
     A : list of numbers
         A list of numbers from specific column
     None
-        Returns None if cannot be extracted
+        Return 'None' if cannot be extracted
     """
     # Check input file and range of column
     if sys.stdin is None:
