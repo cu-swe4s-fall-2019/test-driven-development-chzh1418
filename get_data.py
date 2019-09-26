@@ -25,7 +25,7 @@ def read_stdin_col(col_num):
     for line in sys.stdin:
         try:
             Array = [int(x) for x in line.split()]
-            A.append(int(Arrary[col_num]))
+            A.append(int(Array[col_num]))
         except IndexError:
             return None
         except ValueError:
