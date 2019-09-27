@@ -1,5 +1,5 @@
 # Test Driven DevelopmentI (TDD)
-
+[![Build Status](https://travis-ci.com/cu-swe4s-fall-2019/test-driven-development-chzh1418.svg?branch=master)](https://travis-ci.com/cu-swe4s-fall-2019/test-driven-development-chzh1418)
 ## Description
 This repository constains codes for assignment 3, aiming to practice on the test driven software development.
 
