@@ -16,3 +16,4 @@ script:
     - python test_math_lib.py
     - bash gen_data.sh | python test_get_data.py
     - bash gen_data.sh | python test_data_viz.py
+    - pycodestyle *.py
