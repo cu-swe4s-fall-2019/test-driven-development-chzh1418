@@ -20,7 +20,7 @@ conda install matplotlib
 bash gen_data.sh | python viz.py --out_file [file name] --plot_type [histogram] --col_num [integer]
 ```
 
-- To to unittest
+- To do unittest
 	- `python test_math_lib.py` to test math_lib.py
 	- `python test_get_data.py` to test get_data.py
 	- `python test_data_viz.py` to test data_viz.py
