@@ -54,6 +54,7 @@ def histogram(L, out_file_name):
     --------
         Generate file with specified name containing histogram
         , tile and labeled axis.
+
     Raises
     --------
     NameError
