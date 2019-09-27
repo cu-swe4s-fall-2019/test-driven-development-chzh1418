@@ -24,7 +24,7 @@ def parse_args():
     parser.add_argument('--col_num',
                         type=int,
                         help='Column number',
-                        required=False)
+                        required=True)
 
     return parser.parse_args()
 
