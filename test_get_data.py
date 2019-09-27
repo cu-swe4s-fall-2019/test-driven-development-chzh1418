@@ -3,8 +3,8 @@ import get_data
 import sys
 import random
 
-class TestGetData(unittest.TestCase):
 
+class TestGetData(unittest.TestCase):
 
     def test_read_stdin_col_noinput(self):
         sys.stdin = 'text.txt'
