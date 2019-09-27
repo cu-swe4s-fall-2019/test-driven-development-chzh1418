@@ -5,6 +5,7 @@ import random
 
 class TestGetData(unittest.TestCase):
 
+
     def test_read_stdin_col_noinput(self):
         sys.stdin = 'text.txt'
         self.assertRaises(FileNotFoundError, get_data.read_stdin_col, 1)
